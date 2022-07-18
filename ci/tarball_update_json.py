@@ -11,7 +11,7 @@ filename = "data_test.json"
 if os.path.exists(filename):
     d = load(open(filename))
 else:
-    d = {"dev": [], "release": []}
+    d = {"dev": [], "release": [], "testing": []}
 entry = {
     "url": "https://lfortran.github.io/tarballs/%s/lfortran-%s.tar.gz" % \
             (dest_dir, version),
