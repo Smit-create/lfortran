@@ -3,8 +3,8 @@
 set -e
 set -x
 
-deploy_repo_pull="https://github.com/lfortran/tarballs"
-deploy_repo_push="git@github.com:lfortran/tarballs.git"
+deploy_repo_pull="https://github.com/Smit-create/tarballs.git"
+deploy_repo_push="git@github.com:Smit-create/tarballs.git"
 
 git_hash=$(git rev-parse --short "$GITHUB_SHA")
 git_branch=${GITHUB_REF#refs/heads/}
@@ -54,7 +54,7 @@ set -x
 
 git push ${deploy_repo_push} master:master
 echo "New commit pushed at:"
-echo "https://github.com/lfortran/tarballs/commit/${dest_commit}"
+echo "https://github.com/Smit-create/tarballs/commit/${dest_commit}"
 
 echo "The tarball is available from:"
 echo "https://lfortran.github.io/tarballs/${dest_dir}/lfortran-${lfortran_version}.tar.gz"
