@@ -28,8 +28,9 @@ jobs:
       - name: Upload tarball
         shell: bash -l {0}
         run: |
-            export SSH_DEPLOY_KEY=${{ secrets.SSH_DEPLOY_KEY }}
-            ./build0.sh
-            lfortran_version=$(<version)
-            ci/create_source_tarball.sh $lfortran_version
-            ci/upload_tarball.sh
+          ./build0.sh
+          lfortran_version=$(<version)
+          ci/create_source_tarball.sh $lfortran_version
+          ci/upload_tarball.sh
+        env:
+          SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
