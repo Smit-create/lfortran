@@ -32,7 +32,7 @@ cp $D/dist/lfortran-${lfortran_version}.tar.gz ${dest_dir}/
 python $D/ci/tarball_update_json.py ${dest_dir} ${lfortran_version} ${git_hash}
 
 git config user.name "Deploy"
-git config user.email "noreply@deploy"
+git config user.email "your_email@example.com"
 COMMIT_MESSAGE="Deploying on $(date "+%Y-%m-%d %H:%M:%S")"
 
 git add .
